@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const calc = {
+            firstNum: +prompt('enter the first number'),
+            operator: prompt('enter the operator'),
+            secNum: +prompt('enter the seconde number'),
+            result: 0,
+
+            Addition: function () {
+                calc.result = calc.firstNum + calc.secNum;
+                console.log(calc.result);
+            },
+
+            Multiplication: function () {
+                calc.result = calc.firstNum * calc.secNum;
+                console.log(calc.result);
+            },
+
+            division: function () {
+                calc.result = calc.firstNum / calc.secNum;
+                console.log(calc.result);
+            },
+
+            Subtraction: function () {
+                calc.result = calc.firstNum - calc.secNum;
+                console.log(calc.result);
+            },
+
+            calcFunction: function () {
+                switch (calc.operator) {
+                    case "+":
+                        calc.Addition()
+                        break;
+                    case "*":
+                        calc.Multiplication()
+                        break;
+                    case "/":
+                        calc.division()
+                        break;
+                    case "-":
+                        calc.Subtraction()
+                        break;
+                }
+            },
+        };
+        calc.calcFunction();
+    </script>
+</body>
+
+</html>
